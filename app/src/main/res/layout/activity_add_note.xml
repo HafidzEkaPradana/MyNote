@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DDDDDD"
     tools:context=".AddNoteActivity"
     android:orientation="vertical">
 
@@ -22,37 +21,41 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="10dp"
         android:layout_margin="10dp"
-        android:background="@drawable/rounded_corner">
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="#FFFFFF"
+        android:orientation="vertical"
+        android:padding="10dp">
+
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/titleinput"
-            android:hint="Title"
-            android:background="#DDDDDD"
-            android:padding="10dp"
-            android:layout_margin="10dp"/>
-        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/descriptioninput"
-            android:hint="Decription"
-            android:background="#DDDDDD"
-            android:padding="10dp"
             android:layout_margin="10dp"
+            android:background="#DDDDDD"
+            android:hint="@string/title"
+            android:padding="10dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/descriptioninput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="#DDDDDD"
+            android:gravity="top"
+            android:hint="@string/desc"
             android:lines="10"
-            android:gravity="top"/>
+            android:padding="10dp" />
     </LinearLayout>
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/savebtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/savebtn"
-        android:text="@string/saveButton"
         android:layout_gravity="center"
-        android:backgroundTint="@color/white"
-        android:textColor="#141E61"/>
+        android:backgroundTint="#141E61"
+        android:text="@string/saveButton"
+        android:textColor="#FFFFFF" />
 
 </LinearLayout>

@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         Realm.init(getApplicationContext());
         Realm realm = Realm.getDefaultInstance();
 
-        RealmResults<Note> notesList = realm.where(Note.class).findAllSorted("createdTime", Sort.DESCENDING);
+        RealmResults<Note> notesList = realm.where(Note.class).sort("createdTime", Sort.ASCENDING).findAll();
 
 
         RecyclerView recyclerView = findViewById(R.id.recyclerview);

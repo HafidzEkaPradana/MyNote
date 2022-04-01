@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DDDDDD"
     tools:context=".MainActivity">
 
     <TextView
@@ -20,11 +19,11 @@
         tools:gravity="center" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/recyclerview"
         android:layout_above="@id/addnewnotebtn"
-        android:layout_below="@id/notestitle"/>
+        android:layout_below="@id/notestitle" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/addnewnotebtn"
