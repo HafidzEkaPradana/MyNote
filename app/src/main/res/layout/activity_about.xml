@@ -48,13 +48,24 @@
         <TextView
             android:id="@+id/aboutMynotes"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="77dp"
             android:layout_margin="10dp"
             android:gravity="top"
-            android:text="@string/desc"
             android:lines="10"
             android:padding="10dp"
+            android:text="@string/desc"
+            android:textColor="#393939" />
+
+        <TextView
+            android:id="@+id/textView2"
             android:textColor="#393939"
-            android:textColorHint="#858484" />
+            android:layout_margin="10dp"
+            android:gravity="top"
+            android:lines="10"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/androidVersi" />
+
     </LinearLayout>
 </LinearLayout>

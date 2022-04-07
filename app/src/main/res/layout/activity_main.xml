@@ -38,6 +38,7 @@
         android:backgroundTint="#FBF8F1"
         android:text="@string/addNote"
         android:textColor="#3c6e71"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:visibility="invisible" />
 
 </RelativeLayout>

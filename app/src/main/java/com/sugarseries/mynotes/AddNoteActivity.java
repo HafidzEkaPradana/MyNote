@@ -3,6 +3,7 @@ package com.sugarseries.mynotes;
 import androidx.appcompat.app.AppCompatActivity;
 import io.realm.Realm;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -39,6 +40,7 @@ public class AddNoteActivity extends AppCompatActivity {
                 note.setCreatedTime(createdTime);
                 realm.commitTransaction();
                 Toast.makeText(getApplicationContext(),"Catatan Tersimpan", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(AddNoteActivity.this, MainActivity.class));
                 finish();
 
 

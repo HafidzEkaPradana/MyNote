@@ -16,11 +16,28 @@ public class GridMenuMyNotes extends AppCompatActivity {
         setContentView(R.layout.activity_grid_menu);
 
         aboutNotes = findViewById(R.id.aboutNotesCV);
+        addNote = findViewById(R.id.addNotesCV);
+        listNote = findViewById(R.id.listNotesCV);
+        settNotes = findViewById(R.id.settingNotesCV);
 
         aboutNotes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(GridMenuMyNotes.this,AboutActivity.class));
+            }
+        });
+
+        listNote.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(GridMenuMyNotes.this,MainActivity.class));
+            }
+        });
+
+        addNote.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(GridMenuMyNotes.this,AddNoteActivity.class));
             }
         });
     }
