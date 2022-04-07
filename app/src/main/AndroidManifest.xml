@@ -15,8 +15,10 @@
         <activity
             android:name=".AddNoteActivity"
             android:exported="false" />
+        <activity android:name=".MainActivity"
+            android:exported="false"/>
         <activity
-            android:name=".MainActivity"
+            android:name=".GridMenuMyNotes"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

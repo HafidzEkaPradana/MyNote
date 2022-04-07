@@ -1,17 +1,21 @@
 <resources>
-    <string name="app_name">My Notes</string>
-    <string name="labelApp">My Notes Sugar Series</string>
-    <string name="saveButton">Simpan</string>
-    <string name="title">Judul</string>
-    <string name="desc">Deskripsi</string>
-    <string name="addNote">Tambah Catatan</string>
-    <string name="labelAddNote">Tambah Catatan Baru</string>
+    <string name="app_name">MyNotes</string>
+    <string name="labelApp">MyNotes SugarSeries</string>
+    <string name="saveButton">Save Notes</string>
+    <string name="title">Title</string>
+    <string name="desc">Aplikasi ini dibuat menggunakan Android Studio untuk kebutuhan belajar membuat applikasi Android.
+    Aplikasi ini menggunakan Realm untuk menyimpan data.
+
+    </string>
+    <string name="addNote">Add Notes</string>
+    <string name="labelAddNote">Add New Notes</string>
     <string name="tambahCatatan">Add Notes</string>
     <string name="ListCatatan">List Notes</string>
     <string name="setting">Setting</string>
+    <string name="aboutTitle">About MyNotes</string>
     <string name="about">About</string>
     <string name="titleView">Title</string>
-    <string name="deskripsi">Deskripsi</string>
+    <string name="deskripsi">What do you want to type ?</string>
     <string name="time">6 Apr 2022 16.25.23</string>
 
 </resources>
