@@ -1,32 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:padding="10dp"
+    android:layout_height="wrap_content"
     android:layout_marginBottom="10dp"
-    android:background="@drawable/rounded_corner"
-    android:layout_height="match_parent">
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
 
-    <TextView
-        android:id="@+id/titleoutput"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/kartuku"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:textSize="20sp" />
+        android:layout_height="90dp"
+        android:background="@android:color/darker_gray">
 
-    <TextView
-        android:id="@+id/descriptionoutput"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/titleoutput"
-        android:textColor="#393939" />
+        <TextView
+            android:id="@+id/titleoutput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/titleView"
+            android:textColor="#393939" />
 
-    <TextView
-        android:id="@+id/timeoutput"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/descriptionoutput"
-        android:gravity="end"
-        android:textColor="#858484"
-        android:textSize="12sp" />
+        <TextView
+            android:id="@+id/descriptionoutput"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:paddingTop="30dp"
+            android:text="@string/deskripsi"
+            android:textColor="#858484" />
+
+        <TextView
+            android:id="@+id/timeoutput"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:gravity="bottom|end"
+            android:paddingEnd="7dp"
+            android:paddingBottom="10dp"
+            android:text="@string/time"
+            android:textColor="#858484"
+            tools:ignore="TextContrastCheck" />
+    </androidx.cardview.widget.CardView>
+
 
 </RelativeLayout>

@@ -38,7 +38,7 @@ public class AddNoteActivity extends AppCompatActivity {
                 note.setDescription(description);
                 note.setCreatedTime(createdTime);
                 realm.commitTransaction();
-                Toast.makeText(getApplicationContext(),"Note saved", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"Catatan Tersimpan", Toast.LENGTH_SHORT).show();
                 finish();
 
 

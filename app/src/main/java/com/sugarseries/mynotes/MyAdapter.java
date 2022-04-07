@@ -14,6 +14,7 @@ import org.w3c.dom.Text;
 import java.text.DateFormat;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 import io.realm.Realm;
 import io.realm.RealmResults;
@@ -48,17 +49,17 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             public boolean onLongClick(View v) {
 
                 PopupMenu menu = new PopupMenu(context,v);
-                menu.getMenu().add("DELETE");
+                menu.getMenu().add("Hapus");
                 menu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {
-                        if(item.getTitle().equals("DELETE")){
+                        if(item.getTitle().equals("Hapus")){
                             //delete the note
                             Realm realm = Realm.getDefaultInstance();
                             realm.beginTransaction();
                             note.deleteFromRealm();
                             realm.commitTransaction();
-                            Toast.makeText(context,"Note deleted",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(context,"Catatan Terhapus",Toast.LENGTH_SHORT).show();
                         }
                         return true;
                     }
@@ -81,9 +82,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         TextView titleOutput;
         TextView descriptionOutput;
         TextView timeOutput;
-
+        private CardView cardView;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
+
+            cardView = itemView.findViewById(R.id.kartuku);
             titleOutput = itemView.findViewById(R.id.titleoutput);
             descriptionOutput = itemView.findViewById(R.id.descriptionoutput);
             timeOutput = itemView.findViewById(R.id.timeoutput);

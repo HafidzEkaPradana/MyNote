@@ -4,16 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradien_color"
     tools:context=".MainActivity">
+
 
     <TextView
         android:id="@+id/notestitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:paddingTop="10dp"
         android:text="@string/labelApp"
         android:textAlignment="center"
-        android:textColor="#141E61"
+        android:textColor="#3c6e71"
         android:textSize="20sp"
         android:textStyle="bold"
         tools:gravity="center" />
@@ -23,15 +26,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/addnewnotebtn"
-        android:layout_below="@id/notestitle" />
+        android:layout_below="@id/notestitle"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/addnewnotebtn"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_alignParentBottom="true"
-        android:backgroundTint="#141E61"
-        android:text="Add new note"
-        android:textColor="#FFFFFF" />
+        android:backgroundTint="#FBF8F1"
+        android:text="@string/addNote"
+        android:textColor="#3c6e71"
+        android:textStyle="bold" />
 
 </RelativeLayout>

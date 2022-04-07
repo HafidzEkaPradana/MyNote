@@ -33,21 +33,13 @@ public class MainActivity extends AppCompatActivity {
 
         Realm.init(getApplicationContext());
         Realm realm = Realm.getDefaultInstance();
-
-        RealmResults<Note> notesList = realm.where(Note.class).sort("createdTime", Sort.ASCENDING).findAll();
-
-
+        RealmResults<Note> notesList = realm.where(Note.class).sort("createdTime", Sort.DESCENDING).findAll();
         RecyclerView recyclerView = findViewById(R.id.recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         MyAdapter myAdapter = new MyAdapter(getApplicationContext(),notesList);
         recyclerView.setAdapter(myAdapter);
 
-        notesList.addChangeListener(new RealmChangeListener<RealmResults<Note>>() {
-            @Override
-            public void onChange(RealmResults<Note> notes) {
-                myAdapter.notifyDataSetChanged();
-            }
-        });
+        notesList.addChangeListener(notes -> myAdapter.notifyDataSetChanged());
 
     }
 }

@@ -8,14 +8,17 @@ public class Note extends RealmObject {
     long createdTime;
 
     public String getTitle() {
+
         return title;
     }
 
     public void setTitle(String title) {
+
         this.title = title;
     }
 
     public String getDescription() {
+
         return description;
     }
 
@@ -24,10 +27,12 @@ public class Note extends RealmObject {
     }
 
     public long getCreatedTime() {
+
         return createdTime;
     }
 
     public void setCreatedTime(long createdTime) {
+
         this.createdTime = createdTime;
     }
 }

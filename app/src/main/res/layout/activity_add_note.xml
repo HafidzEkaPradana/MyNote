@@ -4,26 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddNoteActivity"
-    android:orientation="vertical">
+    android:background="@drawable/gradien_color"
+    android:orientation="vertical"
+    tools:context=".AddNoteActivity">
 
     <TextView
+        android:id="@+id/titletextview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/titletextview"
-        android:text="Add new note"
-        android:textColor="#141E61"
-        android:textSize="25dp"
-        android:textStyle="bold"
+        android:layout_margin="20dp"
         android:gravity="center"
-        android:layout_margin="20dp"/>
+        android:text="@string/labelAddNote"
+        android:textColor="#3c6e71"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:background="@drawable/rounded_corner"
-        android:backgroundTint="#FFFFFF"
+        android:backgroundTint="@color/cardview_light_background"
         android:orientation="vertical"
         android:padding="10dp">
 
@@ -32,30 +33,39 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:background="#DDDDDD"
             android:hint="@string/title"
             android:padding="10dp"
+            android:textColor="#393939"
+            android:textColorHint="#858484"
             tools:ignore="TouchTargetSizeCheck" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#858484" />
 
         <EditText
             android:id="@+id/descriptioninput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:background="#DDDDDD"
             android:gravity="top"
             android:hint="@string/desc"
             android:lines="10"
-            android:padding="10dp" />
+            android:padding="10dp"
+            android:textColor="#393939"
+            android:textColorHint="#858484" />
     </LinearLayout>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/savebtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="376dp"
+        android:layout_height="50dp"
         android:layout_gravity="center"
-        android:backgroundTint="#141E61"
+        android:backgroundTint="#FBF8F1"
         android:text="@string/saveButton"
-        android:textColor="#FFFFFF" />
+        android:textColor="#3c6e71"
+        android:textStyle="bold" />
 
 </LinearLayout>
